@@ -141,10 +141,10 @@ void midi_service_gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t 
             break;
         case ESP_GATTS_CONNECT_EVT:
             ESP_LOGI(TAG,
-                     "SERVICE_START_EVT, conn_id %d, remote " ESP_BD_ADDR_STR ":, is_conn %d",
+                     "SERVICE_START_EVT, conn_id %d, remote " ESP_BD_ADDR_STR "",
                      param->connect.conn_id,
-                     ESP_BD_ADDR_HEX(param->connect.remote_bda),
-                     param->connect.is_connected);
+                     ESP_BD_ADDR_HEX(param->connect.remote_bda)
+                     );
             //            _service.conn_id = param->connect.conn_id;
             break;
         case ESP_GATTS_DISCONNECT_EVT:
